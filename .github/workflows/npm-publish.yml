@@ -1,2 +1,6 @@
-run: npm install
-run: npm start
+
+build: 
+  docker: 
+      worker: Dockerfile
+run:
+   worker: node m.js
