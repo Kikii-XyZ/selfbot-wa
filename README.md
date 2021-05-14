@@ -1,4 +1,5 @@
 ## install
+```
 $ git clone https://github.com/Kikii-XyZ/selfbot-wa.git
 $ cd selfbot-wa
 $ npm install
