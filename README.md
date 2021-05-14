@@ -5,6 +5,5 @@ $ cd selfbot-wa
 $ npm install
 $ node .
 ```
-
-> [whatsapp](https://wa.me/6281377526694)
-
+## 📢 :v
+> [Kenalan:v](https://wa.me/628137756694)
