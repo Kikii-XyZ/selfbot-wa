@@ -6,6 +6,5 @@ $ npm install
 $ node .
 ```
 
-> [whatsapp]
-(https://wa.me/6281377526694)
+> [whatsapp](https://wa.me/6281377526694)
 
