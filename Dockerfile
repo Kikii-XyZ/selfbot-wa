@@ -1,4 +1,4 @@
-FROM kikii-XyZ/selfbot-wa
+FROM Kikii-XyZ/selfbot-wa
 
 RUN git clone $GITHUB_REPO_URL /root/selfbot-wa
 WORKDIR /root/selfbot-wa/
