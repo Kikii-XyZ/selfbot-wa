@@ -1,0 +1,80 @@
+{
+    "name": "fnbots",
+    "version": "1.1.17",
+    "description": "A BOT PUBLIC MULTI FUNCTION",
+    "engines": {
+        "node": "14.x"
+    },
+    "main": "m.js",
+    "scripts": {
+        "start": "node m.js",
+        "test": "node t.js"
+    },
+    "dependencies": {
+        "@adiwajshing/baileys": "^3.4.1",
+        "@gugadev/tiktok.js": "^0.1.2",
+        "axios": "^0.21.1",
+        "browser-id3-writer": "^4.4.0",
+        "cheerio": "^1.0.0-rc.5",
+        "child_process": "^1.0.2",
+        "facebook-tools": "^2.0.0",
+        "facebook-video-link": "^1.0.2",
+        "fb-video-downloader": "^1.0.3",
+        "fbdl-core": "github:victorsouzaleal/fbdl-core",
+        "fbvideos": "^1.0.2",
+        "figlet": "^1.5.0",
+        "fluent-ffmpeg": "^2.1.2",
+        "fs-extra": "^9.0.1",
+        "get-line-stickers": "^0.1.0",
+        "gm": "^1.23.1",
+        "got": "^11.8.1",
+        "image-to-base64": "^2.1.1",
+        "image-to-pdf": "^1.0.0",
+        "imagemin-webp": "^6.0.0",
+        "imgbb-uploader": "^1.3.1",
+        "instagram-web-api": "^2.2.2",
+        "jsdom": "^16.5.3",
+        "lsdl-wrapper": "^1.0.7",
+        "mime-types": "^2.1.28",
+        "moment": "^2.29.1",
+        "moment-timezone": "^0.5.32",
+        "nhentai": "^2.1.1",
+        "node-fetch": "^2.6.1",
+        "os": "^0.1.1",
+        "pornhub.js": "^0.2.4",
+        "puppeteer": "^9.1.1",
+        "qrcode-terminal": "^0.12.0",
+        "request": "^2.88.2",
+        "sharp": "^0.27.0",
+        "shorteners": "^1.0.0",
+        "streamifier": "^0.1.1",
+        "syntax-error": "^1.4.0",
+        "tiktok-scraper": "^1.4.23",
+        "tiktok-scraper-without-watermark": "^1.0.6",
+        "urlencode": "^1.1.0",
+        "yt-search": "^2.8.0",
+        "ytdl-core": "^4.7.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.18.0",
+        "eslint-config-standard": "^16.0.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^5.0.0",
+        "got": "^11.8.1",
+        "tape": "^5.1.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Terror-Machine/whatsapp-bot"
+    },
+    "keywords": [
+        "fnbots",
+        "fnbots-wa",
+        "whatsapp",
+        "whatsapp-bot"
+    ],
+    "license": "MIT"
+}
