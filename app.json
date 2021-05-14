@@ -7,61 +7,18 @@
     "stack": "container",
     "env": {
         "data": {
-            "description": "m.Js ile oluşturduğunuz özel session kodu.",
+            "description": "Start On M.js",
             "required": true
         },
         "SUDO": {
-            "description": "Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 1205xxxxxxxxx (USA number +1)",
+            "description": "Awali nomor mu (+62)",
             "required": false
-        },
-        "LANGUAGE": {
-            "description": "Bot language. Azerice => az, English => en, Türkçe => tr, Malayalam => ml, Hindi => HI, Indonesia => IN, Español => ES",
-            "required": true,
-            "value": "TR"
         },
         "HANDLERS": {
-            "description": "Komutlar için.",
+            "description": "prefix",
             "required": true,
-            "value": "^[.!;]"
+            "value": "!?"
         },
-        "SEND_READ": {
-            "description": "Görüldü atmak istiyorsanız true yazın.",
-            "required": true,
-            "value": "true"
-        },
-        "HEROKU": {
-            "description": "Herokuda çalışıyorsa true yazın.",
-            "required": true,
-            "value": "true"
-        },
-        "HEROKU_API_KEY": {
-            "description": "Herokuda API Keyiniz. Heroku API Key.",
-            "required": true
-        },
-        "HEROKU_APP_NAME": {
-            "description": "Herokuda uygulama adı. Heroku APP Name.",
-            "required": true
-        },
-        "DEBUG": {
-            "description": "Geliştiricilere özeldir.",
-            "required": true,
-            "value": "false"
-        },
-        "REMOVE_BG_API_KEY": {
-            "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
-            "required": false
-        },
-        "NO_ONLINE": {
-            "description": "Çevrimiçi görünmek istemiyorsanız true yazın.",
-            "required": false,
-            "value": "true"
-        },
-        "COFFEEHOUSE_API_KEY": {
-            "description": "CoffeeHouse API Key. Need for Lydia. https://coffeehouse.intellivoid.net/",
-            "required": false,
-            "value": "true"
-        }
-    },
     "addons": [{
       "plan": "heroku-postgresql"
     }],
