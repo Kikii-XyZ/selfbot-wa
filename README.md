@@ -6,6 +6,9 @@
 | Sticker |✅|
 | Upload story insta |✅|
 | Nhentai |✅|
+| Ytmp4 |✅|
+| Ytmp3 |✅|
+| Facebook download |✅|
 ## install
 ```
 $ git clone https://github.com/Kikii-XyZ/selfbot-wa.git
