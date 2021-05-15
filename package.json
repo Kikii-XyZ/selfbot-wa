@@ -41,7 +41,6 @@
         "nhentai": "^2.1.1",
         "node-fetch": "^2.6.1",
         "os": "^0.1.1",
-        "photo2anime": "^1.0.0",
         "pornhub.js": "^0.2.4",
         "puppeteer": "^9.1.1",
         "qrcode-terminal": "^0.12.0",
@@ -74,8 +73,14 @@
     "keywords": [
         "fnbots",
         "fnbots-wa",
+        "silfbut",
+        "selfbot",
+        "baileys",
+        "sc bot pul pitur",
+        "bot",
         "whatsapp",
         "whatsapp-bot"
     ],
     "license": "MIT"
 }
+
