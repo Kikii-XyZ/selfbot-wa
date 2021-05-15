@@ -34,7 +34,7 @@ const axios = require("axios").default
 const syntaxerror = require('syntax-error')
 const path = require('path')
 const util = require('util')
-const figlet = require('figlet');l
+const figlet = require('figlet');
 const bot = require("./bot")
 const client = new bot()
 const uplod = require("imgbb-uploader")
@@ -382,7 +382,7 @@ async function whatsapp() {
                     });
                 }
 
-            }
+            
                } else if (txt.startsWith("!?respontag-set")) {
                     if (args["length"] < 1) throw "Pilih On atau Of"
                     const mesaj = body.slice(16)
