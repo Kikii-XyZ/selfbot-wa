@@ -398,7 +398,7 @@ async function whatsapp() {
                         respontag["status"] = true
                         client.reply(conn, to, "Succses Mengaktifkan Respontag", m)
 
-                    } else if (xyz[0] == "on") {
+                    } else if (xyz[0] == "off") {
                         if (respontag["status"] == false) throw 'respontag alredy off'
                         respontag["status"] = false
                         client.reply(conn, to, "Succses Menonaktifkan Respontag", m)
