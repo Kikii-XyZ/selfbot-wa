@@ -9,7 +9,7 @@
 | Ytmp4 |✅|
 | Ytmp3 |✅|
 | Facebook download |✅|
-| Reapontag |✅|
+| Respontag |✅|
 ### install
 ```
 $ git clone https://github.com/Kikii-XyZ/selfbot-wa.git
