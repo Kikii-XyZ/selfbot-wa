@@ -1,3 +1,11 @@
+### Features
+| Feature |Yes|
+| ------------- | ------------- |
+| Play Music|✅|
+| Play Video |✅|
+| Sticker |✅|
+| Upload story insta |✅|
+| Nhentai |✅|
 ## install
 ```
 $ git clone https://github.com/Kikii-XyZ/selfbot-wa.git
