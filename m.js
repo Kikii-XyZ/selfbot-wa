@@ -63,7 +63,10 @@ const insta = new Instagram({
     username: config.username,
     password: config.password
 });
-
+const respontag = {
+    status: false,
+    message: null,
+}
 const api = {
     vh: "291002juan",
     nf: "",
@@ -164,7 +167,7 @@ async function whatsapp() {
             const messageContent = JSON.stringify(m.message)
             const to = m.key.remoteJid
             m.message = (Object.keys(m.message)[0] === 'ephemeralMessage') ? m.message.ephemeralMessage.message : m.message
-            if (!m.key.fromMe) return
+
             const {
                 text,
                 extendedText,
@@ -178,7 +181,6 @@ async function whatsapp() {
                 audio,
                 product
             } = MessageType
-            const prefix = "."
             const type = Object.keys(m.message)[0]
             const isUrl = (url) => {
                 return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
@@ -206,6 +208,8 @@ async function whatsapp() {
             const isQuotedImage = type === 'extendedTextMessage' && messageContent.includes('imageMessage')
             const isQuotedVideo = type === 'extendedTextMessage' && messageContent.includes('videoMessage')
             const isQuotedSticker = type === 'extendedTextMessage' && messageContent.includes('stickerMessage')
+         if (m.key.fromMe == true ) {
+            
             
             if ((txt.startsWith("!?sticker")) || (txt == "!?stiker")) {
                 if (isMedia && !m.message.imageMessage || isQuotedVideo) {
@@ -379,7 +383,43 @@ async function whatsapp() {
                 }
 
             }
+               } else if (txt.startsWith("!?respontag-set")) {
+                    if (args["length"] < 1) throw "Pilih On atau Of"
+                    const mesaj = body.slice(16)
+                    respontag["message"] = mesaj
+                    client.reply(conn, to, "Berhasil Mengubah Message Respontag menjadi: " + mesaj, m)
+                } else if (txt.startsWith("!?respontag")) {
+                    if (args.length < 1) throw 'pilih salah satu!'
 
+                    const msg = body.slice(12)
+                    const xyz = msg.split(" ")
+                    if (xyz[0] == "on") {
+                        if (respontag["status"] == true) throw 'respontag alredy on'
+                        respontag["status"] = true
+                        client.reply(conn, to, "Succses Mengaktifkan Respontag", m)
+
+                    } else if (xyz[0] == "on") {
+                        if (respontag["status"] == false) throw 'respontag alredy off'
+                        respontag["status"] = false
+                        client.reply(conn, to, "Succses Menonaktifkan Respontag", m)
+
+                    }
+
+                }
+            } else if (m.key.fromMe === false) {
+                if (isGroup) {
+                    if (m.message.hasOwnProperty('extendedTextMessage') && m.message.extendedTextMessage.hasOwnProperty('contextInfo') === true && m.message.extendedTextMessage.contextInfo.hasOwnProperty('mentionedJid')) {
+                        jidnya = m.message.extendedTextMessage.contextInfo.mentionedJid
+                        if (respontag["status"]) {
+                            if (jidnya.includes(conn.user.jid)) {
+                                conn.sendMessage(to, respontag["message"], MessageType.text, {
+                                    quoted: m
+                                })
+                            }
+                        }
+                    }
+                }
+            }
         } catch (err) {
             console.log(err)
             client.reply(conn, m.key.remoteJid, "*Message:*\n" + err, m)
